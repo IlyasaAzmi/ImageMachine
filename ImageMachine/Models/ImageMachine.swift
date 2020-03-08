@@ -11,17 +11,23 @@ import Foundation
 struct ImageMachine {
 //    let machineId: String
     let machineName: String
+    let machineThumbnail: String
 //    let machineType: String
 //    let machineQrCode: Int
 //    let lastMaintenanceDate: Date
     
     // Load data(Normally from database or so)
     static func load() -> [ImageMachine] {
-        var machines:[ImageMachine] = []
-        let names:[String] = ["Design", "Research", "Beauty", "Travel", "Makeup"]
-        for name in names{
-            machines.append(ImageMachine(machineName: name))
-        }
+        let machines:[ImageMachine] = [
+            ImageMachine(machineName: "Beach", machineThumbnail: "beach"),
+            ImageMachine(machineName: "Beach", machineThumbnail: "beach"),
+            ImageMachine(machineName: "Beach", machineThumbnail: "beach")
+        ]
+//        let m1 =
+        
+//        for name in names{
+//            machines.append(ImageMachine(machineName: name))
+//        }
 //        categories.shuffle()
         return machines
     }

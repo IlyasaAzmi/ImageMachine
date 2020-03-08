@@ -39,9 +39,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="1uf-bL-2rj">
-                                <rect key="frame" x="0.0" y="201" width="414" height="208"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="1uf-bL-2rj">
+                                <rect key="frame" x="0.0" y="88" width="414" height="725"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="qBM-Ee-gOR">
                                     <size key="itemSize" width="153" height="141"/>
@@ -51,46 +50,54 @@
                                 </collectionViewFlowLayout>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="MachineCollectionViewCell" id="Lee-ub-QZT" customClass="MachineCollectionViewCell" customModule="ImageMachine" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="0.0" width="153" height="141"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="150" height="150"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="Mzg-ec-XgL">
-                                            <rect key="frame" x="0.0" y="0.0" width="153" height="141"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="150" height="150"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="WeW-rm-IZe">
-                                                    <rect key="frame" x="0.0" y="0.0" width="50" height="51"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                                                </view>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Vx-Pu-VBA">
-                                                    <rect key="frame" x="55" y="60" width="42" height="21"/>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="xmw-s2-6Pi">
+                                                    <rect key="frame" x="-1" y="0.0" width="150" height="150"/>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Vx-Pu-VBA">
+                                                    <rect key="frame" x="55" y="64.5" width="40" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
                                             <constraints>
+                                                <constraint firstItem="xmw-s2-6Pi" firstAttribute="leading" secondItem="Mzg-ec-XgL" secondAttribute="leading" constant="-1" id="8vF-UJ-gdM"/>
+                                                <constraint firstItem="xmw-s2-6Pi" firstAttribute="top" secondItem="Mzg-ec-XgL" secondAttribute="top" id="C9m-fZ-W1W"/>
                                                 <constraint firstItem="7Vx-Pu-VBA" firstAttribute="centerY" secondItem="Mzg-ec-XgL" secondAttribute="centerY" id="KYC-pi-lU9"/>
                                                 <constraint firstItem="7Vx-Pu-VBA" firstAttribute="centerX" secondItem="Mzg-ec-XgL" secondAttribute="centerX" id="KyD-KM-cBP"/>
+                                                <constraint firstItem="xmw-s2-6Pi" firstAttribute="centerY" secondItem="7Vx-Pu-VBA" secondAttribute="centerY" id="jZR-yc-LWC"/>
+                                                <constraint firstAttribute="trailing" secondItem="xmw-s2-6Pi" secondAttribute="trailing" constant="1" id="kg9-mJ-a2s"/>
                                                 <constraint firstItem="7Vx-Pu-VBA" firstAttribute="leading" secondItem="Mzg-ec-XgL" secondAttribute="leading" constant="55" id="tRU-n1-cRE"/>
                                             </constraints>
                                         </collectionViewCellContentView>
-                                        <size key="customSize" width="153" height="141"/>
+                                        <size key="customSize" width="150" height="150"/>
                                         <connections>
-                                            <outlet property="containerCell" destination="WeW-rm-IZe" id="REO-cC-dJz"/>
                                             <outlet property="machineLabel" destination="7Vx-Pu-VBA" id="rd5-Ha-Oj9"/>
+                                            <outlet property="machineThumbnailImageView" destination="xmw-s2-6Pi" id="16m-md-4Ui"/>
                                             <segue destination="T2i-Sj-n85" kind="show" id="oSS-vi-EUw"/>
                                         </connections>
                                     </collectionViewCell>
                                 </cells>
                             </collectionView>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemGrayColor" red="0.5568627451" green="0.5568627451" blue="0.57647058819999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="1uf-bL-2rj" secondAttribute="trailing" id="48k-NI-eaZ"/>
+                            <constraint firstItem="1uf-bL-2rj" firstAttribute="top" secondItem="pmv-Il-p1y" secondAttribute="top" id="EzJ-xU-cAw"/>
+                            <constraint firstItem="1uf-bL-2rj" firstAttribute="bottom" secondItem="pmv-Il-p1y" secondAttribute="bottom" id="RHb-6P-eXH"/>
+                            <constraint firstItem="1uf-bL-2rj" firstAttribute="leading" secondItem="nNS-bA-k0o" secondAttribute="leading" id="aw7-TC-xOL"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="pmv-Il-p1y"/>
                     </view>
                     <navigationItem key="navigationItem" id="3b3-ei-RGU">
-                        <barButtonItem key="leftBarButtonItem" title="Item" id="iCT-zk-t3F"/>
-                        <barButtonItem key="rightBarButtonItem" title="Item" id="BDh-NP-Q8w"/>
+                        <barButtonItem key="leftBarButtonItem" title="Add" id="iCT-zk-t3F"/>
+                        <barButtonItem key="rightBarButtonItem" title="Edit" id="BDh-NP-Q8w"/>
                     </navigationItem>
                     <connections>
                         <outlet property="machineCollectionView" destination="1uf-bL-2rj" id="ame-AE-7Zs"/>
@@ -100,10 +107,10 @@
             </objects>
             <point key="canvasLocation" x="3313.04347826087" y="-298.66071428571428"/>
         </scene>
-        <!--View Controller-->
+        <!--Machine Detail View Controller-->
         <scene sceneID="1uL-qT-UB3">
             <objects>
-                <viewController id="T2i-Sj-n85" sceneMemberID="viewController">
+                <viewController id="T2i-Sj-n85" customClass="MachineDetailViewController" customModule="ImageMachine" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="q05-LN-g0R">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -198,11 +205,11 @@
             </objects>
             <point key="canvasLocation" x="1486" y="27"/>
         </scene>
-        <!--Item 1-->
+        <!--Navigation Controller-->
         <scene sceneID="Qba-EQ-VAz">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="ZRa-53-gv0" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item 1" id="l8P-Qe-kte"/>
+                    <tabBarItem key="tabBarItem" systemItem="favorites" id="l8P-Qe-kte"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="t0q-2g-gvp">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
@@ -217,11 +224,11 @@
             </objects>
             <point key="canvasLocation" x="2402.898550724638" y="-298.66071428571428"/>
         </scene>
-        <!--Item 2-->
+        <!--Navigation Controller-->
         <scene sceneID="xjW-yZ-rAL">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="QWH-IB-BER" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item 2" id="bZI-Mn-olE"/>
+                    <tabBarItem key="tabBarItem" systemItem="recents" id="bZI-Mn-olE"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="2JV-XJ-c4K">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>

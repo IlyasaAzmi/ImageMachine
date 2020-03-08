@@ -22,7 +22,7 @@ class MachineViewController: UIViewController {
         
         machineCollectionView.dataSource = self
         
-        let itemSize = UIScreen.main.bounds.width/2 - 3
+        let itemSize = UIScreen.main.bounds.width/1 - 3
 
         let layout = UICollectionViewFlowLayout()
         layout.sectionInset = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
@@ -30,6 +30,8 @@ class MachineViewController: UIViewController {
 
         layout.minimumInteritemSpacing = 3
         layout.minimumLineSpacing = 3
+
+        machineCollectionView.collectionViewLayout = layout
         // Do any additional setup after loading the view.
     }
 }
@@ -44,6 +46,7 @@ extension MachineViewController: UICollectionViewDataSource {
         
         let machine = machines[indexPath.row]
         cell.machineLabel.text = machine.machineName
+        cell.machineThumbnailImageView.image = UIImage(named: machine.machineThumbnail)
         return cell
     }
 }
