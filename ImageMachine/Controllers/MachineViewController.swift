@@ -8,10 +8,13 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class MachineViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        navigationController?.navigationBar.prefersLargeTitles = true
+        navigationItem.title = "Machine"
         // Do any additional setup after loading the view.
     }
 
