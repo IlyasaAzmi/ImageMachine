@@ -9,9 +9,20 @@
 import Foundation
 
 struct ImageMachine {
-    let machineId: String
+//    let machineId: String
     let machineName: String
-    let machineType: String
-    let machineQrCode: Int
-    let lastMaintenanceDate: Date
+//    let machineType: String
+//    let machineQrCode: Int
+//    let lastMaintenanceDate: Date
+    
+    // Load data(Normally from database or so)
+    static func load() -> [ImageMachine] {
+        var machines:[ImageMachine] = []
+        let names:[String] = ["Design", "Research", "Beauty", "Travel", "Makeup"]
+        for name in names{
+            machines.append(ImageMachine(machineName: name))
+        }
+//        categories.shuffle()
+        return machines
+    }
 }
