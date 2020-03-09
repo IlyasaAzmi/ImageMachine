@@ -12,23 +12,17 @@ struct ImageMachine {
 //    let machineId: String
     let machineName: String
     let machineThumbnail: String
-//    let machineType: String
-//    let machineQrCode: Int
-//    let lastMaintenanceDate: Date
+    let machineType: String
+    let machineQrCode: Int
+    let lastMaintenanceDate = Date()
     
     // Load data(Normally from database or so)
     static func load() -> [ImageMachine] {
         let machines:[ImageMachine] = [
-            ImageMachine(machineName: "Beach", machineThumbnail: "beach"),
-            ImageMachine(machineName: "Beach", machineThumbnail: "beach"),
-            ImageMachine(machineName: "Beach", machineThumbnail: "beach")
+            ImageMachine(machineName: "Beach", machineThumbnail: "beach", machineType: "vacation", machineQrCode: 1200000),
+            ImageMachine(machineName: "Beach", machineThumbnail: "beach", machineType: "work", machineQrCode: 1200000),
+            ImageMachine(machineName: "Beach", machineThumbnail: "beach", machineType: "family", machineQrCode: 1200000)
         ]
-//        let m1 =
-        
-//        for name in names{
-//            machines.append(ImageMachine(machineName: name))
-//        }
-//        categories.shuffle()
         return machines
     }
 }

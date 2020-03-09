@@ -13,7 +13,7 @@ class MachineDetailViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        navigationItem.title = "Machine"
+        navigationItem.title = "Machine Detail"
 
         // Do any additional setup after loading the view.
     }

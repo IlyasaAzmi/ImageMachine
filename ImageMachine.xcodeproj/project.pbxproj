@@ -18,6 +18,11 @@
 		EDF7E62C2414AA0700B574B0 /* QRReaderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDF7E62B2414AA0700B574B0 /* QRReaderViewController.swift */; };
 		EDF7E62E2414AE2200B574B0 /* MachineCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDF7E62D2414AE2200B574B0 /* MachineCollectionViewCell.swift */; };
 		EDF7E6322414C8C800B574B0 /* MachineDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDF7E6312414C8C800B574B0 /* MachineDetailViewController.swift */; };
+		EDF7E6352415024F00B574B0 /* ImageMachine.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = EDF7E6332415024F00B574B0 /* ImageMachine.xcdatamodeld */; };
+		EDF7E6B72416507F00B574B0 /* Photo+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDF7E6B52416507F00B574B0 /* Photo+CoreDataClass.swift */; };
+		EDF7E6B82416507F00B574B0 /* Photo+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDF7E6B62416507F00B574B0 /* Photo+CoreDataProperties.swift */; };
+		EDF7E6BB241650A200B574B0 /* Image+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDF7E6B9241650A200B574B0 /* Image+CoreDataClass.swift */; };
+		EDF7E6BC241650A200B574B0 /* Image+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDF7E6BA241650A200B574B0 /* Image+CoreDataProperties.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +39,11 @@
 		EDF7E62B2414AA0700B574B0 /* QRReaderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRReaderViewController.swift; sourceTree = "<group>"; };
 		EDF7E62D2414AE2200B574B0 /* MachineCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MachineCollectionViewCell.swift; sourceTree = "<group>"; };
 		EDF7E6312414C8C800B574B0 /* MachineDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MachineDetailViewController.swift; sourceTree = "<group>"; };
+		EDF7E6342415024F00B574B0 /* ImageMachine.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ImageMachine.xcdatamodel; sourceTree = "<group>"; };
+		EDF7E6B52416507F00B574B0 /* Photo+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Photo+CoreDataClass.swift"; sourceTree = "<group>"; };
+		EDF7E6B62416507F00B574B0 /* Photo+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Photo+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		EDF7E6B9241650A200B574B0 /* Image+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Image+CoreDataClass.swift"; sourceTree = "<group>"; };
+		EDF7E6BA241650A200B574B0 /* Image+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Image+CoreDataProperties.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,6 +84,7 @@
 				EDF7E6192413F7F600B574B0 /* Assets.xcassets */,
 				EDF7E61B2413F7F600B574B0 /* LaunchScreen.storyboard */,
 				EDF7E61E2413F7F600B574B0 /* Info.plist */,
+				EDF7E6332415024F00B574B0 /* ImageMachine.xcdatamodeld */,
 			);
 			path = ImageMachine;
 			sourceTree = "<group>";
@@ -101,6 +112,10 @@
 		EDF7E62624149F2D00B574B0 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				EDF7E6B9241650A200B574B0 /* Image+CoreDataClass.swift */,
+				EDF7E6BA241650A200B574B0 /* Image+CoreDataProperties.swift */,
+				EDF7E6B52416507F00B574B0 /* Photo+CoreDataClass.swift */,
+				EDF7E6B62416507F00B574B0 /* Photo+CoreDataProperties.swift */,
 				EDF7E62724149F4B00B574B0 /* ImageMachine.swift */,
 			);
 			path = Models;
@@ -177,12 +192,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EDF7E6B72416507F00B574B0 /* Photo+CoreDataClass.swift in Sources */,
 				EDF7E6152413F7F400B574B0 /* MachineViewController.swift in Sources */,
 				EDF7E6322414C8C800B574B0 /* MachineDetailViewController.swift in Sources */,
+				EDF7E6BB241650A200B574B0 /* Image+CoreDataClass.swift in Sources */,
 				EDF7E62824149F4B00B574B0 /* ImageMachine.swift in Sources */,
+				EDF7E6BC241650A200B574B0 /* Image+CoreDataProperties.swift in Sources */,
+				EDF7E6352415024F00B574B0 /* ImageMachine.xcdatamodeld in Sources */,
 				EDF7E62C2414AA0700B574B0 /* QRReaderViewController.swift in Sources */,
 				EDF7E62E2414AE2200B574B0 /* MachineCollectionViewCell.swift in Sources */,
 				EDF7E62A2414A59100B574B0 /* MainTabController.swift in Sources */,
+				EDF7E6B82416507F00B574B0 /* Photo+CoreDataProperties.swift in Sources */,
 				EDF7E6112413F7F400B574B0 /* AppDelegate.swift in Sources */,
 				EDF7E6132413F7F400B574B0 /* SceneDelegate.swift in Sources */,
 			);
@@ -382,6 +402,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		EDF7E6332415024F00B574B0 /* ImageMachine.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				EDF7E6342415024F00B574B0 /* ImageMachine.xcdatamodel */,
+			);
+			currentVersion = EDF7E6342415024F00B574B0 /* ImageMachine.xcdatamodel */;
+			path = ImageMachine.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = EDF7E6052413F7F400B574B0 /* Project object */;
 }
