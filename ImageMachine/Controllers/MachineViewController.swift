@@ -13,6 +13,8 @@ class MachineViewController: UIViewController {
 
     @IBOutlet weak var machineCollectionView: UICollectionView!
     
+    var container: NSPersistentContainer!
+    
     let machines = ImageMachine.load()
     
     override func viewDidLoad() {
@@ -33,7 +35,17 @@ class MachineViewController: UIViewController {
         layout.minimumLineSpacing = 3
 
         machineCollectionView.collectionViewLayout = layout
-        // Do any additional setup after loading the view.
+        
+//        guard container != nil else {
+//            fatalError("This view needs a persistent container.")
+//        }
+//        // The persistent container is available.
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let machineDetailVC = segue.destination as? MachineDetailViewController {
+            machineDetailVC.container = container
+        }
     }
 }
 

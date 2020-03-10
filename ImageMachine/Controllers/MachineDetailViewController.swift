@@ -7,8 +7,11 @@
 //
 
 import UIKit
+import CoreData
 
 class MachineDetailViewController: UIViewController {
+    
+    var container: NSPersistentContainer!
 
     override func viewDidLoad() {
         super.viewDidLoad()

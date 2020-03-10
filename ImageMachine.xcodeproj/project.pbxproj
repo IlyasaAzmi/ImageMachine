@@ -23,6 +23,7 @@
 		EDF7E6B82416507F00B574B0 /* Photo+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDF7E6B62416507F00B574B0 /* Photo+CoreDataProperties.swift */; };
 		EDF7E6BB241650A200B574B0 /* Image+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDF7E6B9241650A200B574B0 /* Image+CoreDataClass.swift */; };
 		EDF7E6BC241650A200B574B0 /* Image+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDF7E6BA241650A200B574B0 /* Image+CoreDataProperties.swift */; };
+		EDF7E6BE24165A7F00B574B0 /* AddMachineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDF7E6BD24165A7F00B574B0 /* AddMachineViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,6 +45,7 @@
 		EDF7E6B62416507F00B574B0 /* Photo+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Photo+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		EDF7E6B9241650A200B574B0 /* Image+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Image+CoreDataClass.swift"; sourceTree = "<group>"; };
 		EDF7E6BA241650A200B574B0 /* Image+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Image+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		EDF7E6BD24165A7F00B574B0 /* AddMachineViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddMachineViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,6 +98,7 @@
 				EDF7E6292414A59100B574B0 /* MainTabController.swift */,
 				EDF7E62B2414AA0700B574B0 /* QRReaderViewController.swift */,
 				EDF7E6312414C8C800B574B0 /* MachineDetailViewController.swift */,
+				EDF7E6BD24165A7F00B574B0 /* AddMachineViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -194,6 +197,7 @@
 			files = (
 				EDF7E6B72416507F00B574B0 /* Photo+CoreDataClass.swift in Sources */,
 				EDF7E6152413F7F400B574B0 /* MachineViewController.swift in Sources */,
+				EDF7E6BE24165A7F00B574B0 /* AddMachineViewController.swift in Sources */,
 				EDF7E6322414C8C800B574B0 /* MachineDetailViewController.swift in Sources */,
 				EDF7E6BB241650A200B574B0 /* Image+CoreDataClass.swift in Sources */,
 				EDF7E62824149F4B00B574B0 /* ImageMachine.swift in Sources */,

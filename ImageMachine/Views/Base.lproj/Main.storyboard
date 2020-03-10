@@ -31,6 +31,79 @@
             </objects>
             <point key="canvasLocation" x="3313.04347826087" y="351.5625"/>
         </scene>
+        <!--Add Machine View Controller-->
+        <scene sceneID="tiM-Zj-r3Y">
+            <objects>
+                <viewController id="7uh-wA-Rwe" customClass="AddMachineViewController" customModule="ImageMachine" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Lcl-nJ-Wr3">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xfK-ar-R8o">
+                                <rect key="frame" x="20" y="138" width="374" height="36"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Name" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="KSO-Kw-PcJ">
+                                <rect key="frame" x="55" y="222" width="304" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Type" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="QiB-qo-Tc7">
+                                <rect key="frame" x="55" y="293" width="304" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="QR Code" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ycd-Ex-qgQ">
+                                <rect key="frame" x="55" y="368" width="304" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RL9-Hh-S2F">
+                                <rect key="frame" x="20" y="703" width="374" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="HME-cz-guh"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="saveButtonPressed:" destination="7uh-wA-Rwe" eventType="touchUpInside" id="ATd-GS-RvX"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="4Kc-Bx-Rqs" firstAttribute="bottom" secondItem="RL9-Hh-S2F" secondAttribute="bottom" constant="60" id="17c-US-KXA"/>
+                            <constraint firstItem="xfK-ar-R8o" firstAttribute="top" secondItem="4Kc-Bx-Rqs" secondAttribute="top" constant="50" id="900-Jw-nqD"/>
+                            <constraint firstItem="4Kc-Bx-Rqs" firstAttribute="trailing" secondItem="xfK-ar-R8o" secondAttribute="trailing" constant="20" id="9bU-lk-cdB"/>
+                            <constraint firstItem="RL9-Hh-S2F" firstAttribute="leading" secondItem="4Kc-Bx-Rqs" secondAttribute="leading" constant="20" id="Tos-qc-4ql"/>
+                            <constraint firstItem="4Kc-Bx-Rqs" firstAttribute="trailing" secondItem="RL9-Hh-S2F" secondAttribute="trailing" constant="20" id="eKw-zn-H20"/>
+                            <constraint firstItem="xfK-ar-R8o" firstAttribute="leading" secondItem="4Kc-Bx-Rqs" secondAttribute="leading" constant="20" id="x9r-cS-t7M"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="4Kc-Bx-Rqs"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="FSz-aj-OIv">
+                        <barButtonItem key="leftBarButtonItem" title="Cancel" id="Kpv-Kp-pSH">
+                            <connections>
+                                <action selector="cancelButtonPressed:" destination="7uh-wA-Rwe" id="m2y-5l-9jI"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="addTitleLabel" destination="xfK-ar-R8o" id="zaX-Jc-KZR"/>
+                        <outlet property="cancelBarButtonItem" destination="Kpv-Kp-pSH" id="Jgx-rI-0ci"/>
+                        <outlet property="nameTextField" destination="KSO-Kw-PcJ" id="lyP-2c-CD6"/>
+                        <outlet property="saveButton" destination="RL9-Hh-S2F" id="7P8-rE-FEI"/>
+                        <outlet property="typeTextField" destination="QiB-qo-Tc7" id="5gu-oy-iUz"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Diq-Nr-Ezt" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="5047.826086956522" y="-982.36607142857133"/>
+        </scene>
         <!--Machine View Controller-->
         <scene sceneID="Ndx-s4-JbN">
             <objects>
@@ -96,8 +169,14 @@
                         <viewLayoutGuide key="safeArea" id="pmv-Il-p1y"/>
                     </view>
                     <navigationItem key="navigationItem" id="3b3-ei-RGU">
-                        <barButtonItem key="leftBarButtonItem" title="Add" id="iCT-zk-t3F"/>
-                        <barButtonItem key="rightBarButtonItem" title="Sort" id="BDh-NP-Q8w"/>
+                        <rightBarButtonItems>
+                            <barButtonItem title="Sort" image="arrow.up.arrow.down" catalog="system" id="BDh-NP-Q8w"/>
+                            <barButtonItem title="Add" image="plus" catalog="system" id="iCT-zk-t3F">
+                                <connections>
+                                    <segue destination="xKg-Ls-FfR" kind="show" id="YR5-xk-TBI"/>
+                                </connections>
+                            </barButtonItem>
+                        </rightBarButtonItems>
                     </navigationItem>
                     <connections>
                         <outlet property="machineCollectionView" destination="1uf-bL-2rj" id="ame-AE-7Zs"/>
@@ -212,7 +291,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Aud-AP-67H" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4960.8695652173919" y="-299.33035714285711"/>
+            <point key="canvasLocation" x="5048" y="-299"/>
         </scene>
         <!--Main Tab Controller-->
         <scene sceneID="CBC-OW-E89">
@@ -232,11 +311,11 @@
             </objects>
             <point key="canvasLocation" x="1486" y="27"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--Machine-->
         <scene sceneID="Qba-EQ-VAz">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="ZRa-53-gv0" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" systemItem="favorites" id="l8P-Qe-kte"/>
+                    <tabBarItem key="tabBarItem" title="Machine" image="house" catalog="system" id="l8P-Qe-kte"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="t0q-2g-gvp">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
@@ -251,11 +330,11 @@
             </objects>
             <point key="canvasLocation" x="2402.898550724638" y="-298.66071428571428"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--Reader-->
         <scene sceneID="xjW-yZ-rAL">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="QWH-IB-BER" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" systemItem="recents" id="bZI-Mn-olE"/>
+                    <tabBarItem key="tabBarItem" title="Reader" image="qrcode.viewfinder" catalog="system" id="bZI-Mn-olE"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="2JV-XJ-c4K">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
@@ -270,5 +349,30 @@
             </objects>
             <point key="canvasLocation" x="2402.898550724638" y="351.5625"/>
         </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="L74-P1-6yW">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="xKg-Ls-FfR" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" id="Q8g-ot-P40"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="hXb-Mm-7mc">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="7uh-wA-Rwe" kind="relationship" relationship="rootViewController" id="81j-xQ-Y9X"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qth-vw-3Bt" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4137.68115942029" y="-982.36607142857133"/>
+        </scene>
     </scenes>
+    <resources>
+        <image name="arrow.up.arrow.down" catalog="system" width="64" height="48"/>
+        <image name="house" catalog="system" width="64" height="54"/>
+        <image name="plus" catalog="system" width="64" height="56"/>
+        <image name="qrcode.viewfinder" catalog="system" width="64" height="56"/>
+    </resources>
 </document>
