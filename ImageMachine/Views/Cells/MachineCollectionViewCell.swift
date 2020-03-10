@@ -30,7 +30,5 @@ class MachineCollectionViewCell: UICollectionViewCell {
         else{
             print("ERROR")
         }
-        
     }
-    
 }

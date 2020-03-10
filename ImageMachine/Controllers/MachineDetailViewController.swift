@@ -9,27 +9,60 @@
 import UIKit
 import CoreData
 
-class MachineDetailViewController: UIViewController {
+class MachineDetailViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
+    
+    @IBOutlet weak var machineDetailTableView: UITableView!
+    @IBOutlet weak var photoCollectionView: UICollectionView!
+    
+    var name = ""
     
     var container: NSPersistentContainer!
+    
+//    var machines : [ImageMachine] = []
+    var machines = [Image]()
+    
+    let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
         navigationItem.title = "Machine Detail"
+        
+        machineDetailTableView.delegate = self
+        machineDetailTableView.dataSource = self
+        
+        loadData()
 
         // Do any additional setup after loading the view.
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    func loadData() {
+        let request : NSFetchRequest<Image> = Image.fetchRequest()
+        
+        do {
+            machines = try context.fetch(request)
+        } catch {
+            print(error)
+        }
+        
+        machineDetailTableView.reloadData()
     }
-    */
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return machines.count
+    }
+
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
+        
+        cell.textLabel?.text = "Ok"
+        cell.detailTextLabel?.text = "\(machines.count) baris"
+        
+        return cell
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        print("selected \([indexPath.row])")
+    }
 
 }
